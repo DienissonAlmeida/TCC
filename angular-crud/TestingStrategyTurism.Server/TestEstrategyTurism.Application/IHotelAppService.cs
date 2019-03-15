@@ -7,8 +7,8 @@ namespace TestEstrategyTurism.Application
 {
     public interface IHotelAppService
     {
-        IEnumerable<Hotel> GetHotels(string city);
+        //Task<IEnumerable<Hotel>> GetHotelsPerCity(string city);
 
-        IEnumerable<Hotel> GetHotels();
+        Task<List<Hotel>> GetHotels();
     }
 }
