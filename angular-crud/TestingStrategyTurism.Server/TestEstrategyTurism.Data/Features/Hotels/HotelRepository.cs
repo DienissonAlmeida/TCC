@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,14 @@ namespace TestEstrategyTurism.Data.Features.Hotels
         {
             _context = testingEstrategyTurismDbContext;
         }
-        public IEnumerable<Hotel> GetHotels()
+        public async Task<List<Hotel>> GetHotels()
         {
-            return _context.Hotels;
+            return await _context.Hotels.ToListAsync();
         }
+
+        //public async Task<IEnumerable<Hotel>> GetHotelsPerCity(string city)
+        //{
+        //    return await _context.Hotels.FindAsync(city);
+        //}
     }
 }

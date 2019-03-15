@@ -15,15 +15,16 @@ namespace TestEstrategyTurism.Application
         {
             _hotelRepository = hotelRepository;
         }
-        public IEnumerable<Hotel> GetHotels(string city)
-        {
-          return _hotelRepository.GetHotels().Where(x => x.City == city);
 
-        }
-
-        public IEnumerable<Hotel> GetHotels()
+        public Task<List<Hotel>> GetHotels()
         {
-            return  _hotelRepository.GetHotels();
+            return _hotelRepository.GetHotels();
         }
+        //public async Task<IEnumerable<Hotel>> GetHotelsPerCity(string city)
+        //{
+        //  return await _hotelRepository.GetHotels(city);
+
+   
+
     }
 }

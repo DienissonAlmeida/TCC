@@ -11,6 +11,7 @@ import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { HotelModule } from './hotels/hotel.module';
+import { FilterListPipe } from './shared/filter-list.pipe';
 
 @NgModule({
   imports: [

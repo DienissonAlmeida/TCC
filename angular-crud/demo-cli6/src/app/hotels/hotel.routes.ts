@@ -3,7 +3,7 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
 
 export const HOTEL_ROUTES: Routes = [
   {
-    path: 'hotel',
+    path: 'hotels',
     component: HotelListComponent
   }
 //   {

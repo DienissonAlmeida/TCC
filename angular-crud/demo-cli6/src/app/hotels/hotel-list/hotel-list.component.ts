@@ -15,28 +15,27 @@ export class HotelListComponent implements OnInit {
 
   constructor(private _hotelService: HotelService) { }
 
-  // get hotelList(): Hotel[] {
-  //   this._hotelService.hotelList.forEach(element => {
-  //     console.log(element);
-  //   });
-
-  //   return this._hotelService.hotelList;
-  // }
 
   ngOnInit() {
     this._hotelService.getAll()
-    .map(dados => JSON.stringify(dados))
     .subscribe(dados => this.populaDados(dados));
   }
 
   populaDados(dados: any) {
-    console.log("indo na api")
-    console.log(dados);
+    this.hotelList = dados;
   }
 
   search(): void {
-    // this._hotelService.load(this.filter);
-    throw new Error("não implementado");
+    if (this.filter.city !== "") {
+      console.log('chegando com filtro: ' + this.filter.city);
+      this._hotelService.getByFilter(this.filter)
+      .subscribe(dados => this.populaDados(dados));
+    } else {
+      console.log('chegando sem filtro');
+      this._hotelService.getAll()
+      .subscribe(dados => this.populaDados(dados));
+    }
+
   }
 
   select(selected: Hotel): void {

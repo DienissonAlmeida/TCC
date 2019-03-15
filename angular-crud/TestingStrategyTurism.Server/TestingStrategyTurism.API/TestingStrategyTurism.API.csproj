@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Turism.Infra\Turism.Infra.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>

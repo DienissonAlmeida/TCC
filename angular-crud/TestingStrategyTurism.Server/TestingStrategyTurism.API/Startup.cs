@@ -12,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TestEstrategyTurism.Data.Context;
-using TestingStrategyTurism.API.Extensions;
 using Turism.Infra;
 
 namespace TestingStrategyTurism.API
@@ -29,16 +28,23 @@ namespace TestingStrategyTurism.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server= localhost;Database=TestingStrategyTurism;Integrated Security=True";
 
             services.AddDbContext<TestingEstrategyTurismDbContext>(opt =>
             {
-                opt.UseSqlServer(connection);
+                opt.UseSqlServer(Configuration.GetConnectionString("TestingEstrategyTurismDbContext"),
+                    b => b.MigrationsAssembly("TestingStrategyTurism.API"));
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
 
         }
 
@@ -56,17 +62,8 @@ namespace TestingStrategyTurism.API
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("CorsPolicy");
             app.UseMvc();
-
-            app.UseCORS(Configuration);
-            app.UseCors(builder =>
-                         builder
-                                .WithOrigins(corsSettings.Origins)
-                                .WithMethods(corsSettings.Methods)
-                                .WithHeaders(corsSettings.Headers)
-                                .Build()););
-
         }
     }
 }

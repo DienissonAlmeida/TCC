@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using TestEstrategyTurism.Application;
 using TestEstrategyTurism.Data.Context;
 using TestEstrategyTurism.Data.Features.Hotels;
@@ -27,21 +25,11 @@ namespace TestingStrategyTurism.API.Controllers
 
         // GET api/hotels
         [HttpGet]
-        //[Route("{city:string}")]
-        public IEnumerable<Hotel> Get()
+        public async Task<ActionResult<IEnumerable<Hotel>>> Get()
         {
-            var city = "";
-            IEnumerable<Hotel> result;
-            if (!String.IsNullOrEmpty(city))
-            {
-                result = _hotelAppService.GetHotels(city);
-            }
-            else
-            {
-                result =_hotelAppService.GetHotels();
-            }
 
-            return result;
+            return await _hotelAppService.GetHotels();
+
         }
 
         // GET api/values/5
