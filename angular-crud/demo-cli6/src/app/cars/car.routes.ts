@@ -6,7 +6,7 @@ export const CAR_ROUTES: Routes = [
   {
     path: 'cars',
     component: CarListComponent
-  },
+  }
   // {
   //   path: 'flight/:id',
   //   component: CarslistComponent

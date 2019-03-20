@@ -1,3 +1,4 @@
+import { CarModule } from './cars/car.module';
 import { FlightModule } from './flights/flight.module';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -19,6 +20,7 @@ import { FilterListPipe } from './shared/filter-list.pipe';
     HttpClientModule,
     FlightModule,
     HotelModule,
+    CarModule,
 
     RouterModule.forRoot([...APP_ROUTES], {...APP_EXTRA_OPTIONS}),
   ],
