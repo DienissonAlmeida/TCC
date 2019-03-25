@@ -1,15 +1,17 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'filterList'
+  name: "filterList"
 })
 export class FilterListPipe implements PipeTransform {
+  transform(values: any[], filter: string): any {
 
-  transform(values: any[], term: string): any {
-    
-    return values.filter(item => {
-      item.city.search(new RegExp(term, 'i')) !== -1
-    });
+    if (filter !== "") {
+      console.log(filter);
+      return values.filter(item =>
+        item.city.search(new RegExp(filter, "i")) !== -1);
+    } else {
+      return values;
+    }
   }
-
 }

@@ -23,6 +23,7 @@ export class HotelListComponent implements OnInit {
 
   populaDados(dados: any) {
     this.hotelList = dados;
+    console.log(this.hotelList);
   }
 
   search(): void {

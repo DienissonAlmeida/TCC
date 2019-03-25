@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestEstrategyTurism.Data.Features.Hotels;
-using TestEstrategyTurism.Domain;
+using TestEstrategyTurism.Domain.Features.Hotels;
+using TestEstrategyTurism.Domain.Features.Cars;
 
 namespace TestEstrategyTurism.Data.Context
 {
@@ -15,10 +13,12 @@ namespace TestEstrategyTurism.Data.Context
         }
 
         public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Car> Cars { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new HotelEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new CarEntityConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

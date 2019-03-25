@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Domain.Features.Hotels;
+using TestEstrategyTurism.Domain.Features.Cars;
 
 namespace TestEstrategyTurism.Data.Features.Hotels
 {
-    public class HotelRepository : IHotelRepository
+    public class CarRepository : ICarRepository
     {
         private TestingEstrategyTurismDbContext _context;
 
-        public HotelRepository(TestingEstrategyTurismDbContext testingEstrategyTurismDbContext)
+        public CarRepository(TestingEstrategyTurismDbContext testingEstrategyTurismDbContext)
         {
             _context = testingEstrategyTurismDbContext;
         }
-        public async Task<List<Hotel>> GetHotels()
+        public async Task<List<Car>> GetCars()
         {
-            return await _context.Hotels.ToListAsync();
+            return await _context.Cars.ToListAsync();
         }
 
         //public async Task<IEnumerable<Hotel>> GetHotelsPerCity(string city)
