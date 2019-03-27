@@ -18,7 +18,15 @@ namespace TestEstrategyTurism.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CarEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new HotelEntityConfiguration()).Entity<Hotel>()
+                .HasData(
+                    new Hotel { Id = 1, Name = "San Bernardo", City = "Vacaria", Stars = 4},
+                    new Hotel { Id = 2, Name = "Lages Plaza Hotel", City = "Lages", Stars = 4 }
+                    );
+            modelBuilder.ApplyConfiguration(new CarEntityConfiguration()).Entity<Car>()
+                .HasData(
+                    new Car {Id = 1, Model = "C4", Brand = "Citroen", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual}
+                    );
 
             base.OnModelCreating(modelBuilder);
         }

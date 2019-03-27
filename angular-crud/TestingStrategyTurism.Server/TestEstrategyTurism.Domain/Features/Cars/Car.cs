@@ -11,10 +11,10 @@ namespace TestEstrategyTurism.Domain.Features.Cars
 
         public int Passengers { get; set; }
 
-        public string Transmission { get; set; }
+        public Transmission Transmission { get; set; }
 
         public bool AirConditioning { get; set; }
 
-        public string[] Photos { get; set; }
+        public string Photos { get; set; }
     }
 }

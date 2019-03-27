@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestEstrategyTurism.Data.Context;
 
 namespace TestingStrategyTurism.API.Migrations
 {
     [DbContext(typeof(TestingEstrategyTurismDbContext))]
-    partial class TestingEstrategyTurismDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190327203606_Cars")]
+    partial class Cars
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,23 +39,12 @@ namespace TestingStrategyTurism.API.Migrations
 
                     b.Property<string>("Photos");
 
-                    b.Property<int>("Transmission")
+                    b.Property<string>("Transmission")
                         .HasMaxLength(10);
 
                     b.HasKey("Id");
 
                     b.ToTable("Cars");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AirConditioning = true,
-                            Brand = "Citroen",
-                            Model = "C4",
-                            Passengers = 5,
-                            Transmission = 0
-                        });
                 });
 
             modelBuilder.Entity("TestEstrategyTurism.Domain.Features.Hotels.Hotel", b =>
@@ -62,34 +53,15 @@ namespace TestingStrategyTurism.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City")
-                        .HasMaxLength(50);
+                    b.Property<string>("City");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(50);
+                    b.Property<string>("Name");
 
-                    b.Property<int>("Stars")
-                        .HasMaxLength(10);
+                    b.Property<int>("Stars");
 
                     b.HasKey("Id");
 
                     b.ToTable("Hotels");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            City = "Vacaria",
-                            Name = "San Bernardo",
-                            Stars = 4
-                        },
-                        new
-                        {
-                            Id = 2,
-                            City = "Lages",
-                            Name = "Lages Plaza Hotel",
-                            Stars = 4
-                        });
                 });
 #pragma warning restore 612, 618
         }
