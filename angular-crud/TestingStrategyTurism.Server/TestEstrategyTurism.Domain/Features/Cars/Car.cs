@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using TestEstrategyTurism.Domain.Features.Reservations;
 
 namespace TestEstrategyTurism.Domain.Features.Cars
 
@@ -16,5 +18,7 @@ namespace TestEstrategyTurism.Domain.Features.Cars
         public bool AirConditioning { get; set; }
 
         public string Photos { get; set; }
+
+        public List<Reservation> MyProperty { get; set; }
     }
 }

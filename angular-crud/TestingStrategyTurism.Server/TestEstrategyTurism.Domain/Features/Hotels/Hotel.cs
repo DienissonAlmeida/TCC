@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using TestEstrategyTurism.Domain.Features.Reservations;
 
 namespace TestEstrategyTurism.Domain.Features.Hotels
 {
@@ -8,6 +10,10 @@ namespace TestEstrategyTurism.Domain.Features.Hotels
 
         public string Name { get; set; }
 
+        public double Daily { get; set; }
+
         public int Stars { get; set; }
+
+        public List<Reservation> Reservations { get; set; }
     }
 }

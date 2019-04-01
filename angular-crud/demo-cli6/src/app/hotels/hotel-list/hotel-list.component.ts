@@ -15,7 +15,6 @@ export class HotelListComponent implements OnInit {
 
   constructor(private _hotelService: HotelService) { }
 
-
   ngOnInit() {
     this._hotelService.getAll()
     .subscribe(dados => this.populaDados(dados));

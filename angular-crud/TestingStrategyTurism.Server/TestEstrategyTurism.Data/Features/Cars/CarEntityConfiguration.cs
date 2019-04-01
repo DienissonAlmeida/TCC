@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TestEstrategyTurism.Domain.Features.Cars;
 
-namespace TestEstrategyTurism.Data.Features.Hotels
+namespace TestEstrategyTurism.Data.Features.Cars
 {
     public class CarEntityConfiguration : IEntityTypeConfiguration<Car>
     {

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TestEstrategyTurism.Application;
 using TestEstrategyTurism.Data.Context;
+using TestEstrategyTurism.Data.Features;
 using TestEstrategyTurism.Data.Features.Hotels;
+using TestEstrategyTurism.Domain.Features;
 using TestEstrategyTurism.Domain.Features.Hotels;
 
 namespace TestingStrategyTurism.API.Controllers
@@ -13,13 +15,13 @@ namespace TestingStrategyTurism.API.Controllers
     public class HotelsController : ControllerBase
     {
         private IHotelAppService _hotelAppService;
-        private IHotelRepository _hotelRepository;
+        private IRepositoryBase<Hotel> _repositoryBase;
         private readonly TestingEstrategyTurismDbContext _context;
         public HotelsController(TestingEstrategyTurismDbContext context)
         {
             _context = context;
-            _hotelRepository = new HotelRepository(_context);
-            _hotelAppService = new HotelAppService(_hotelRepository);
+            _repositoryBase = new RepositoryBase<Hotel>(_context);
+            _hotelAppService = new HotelAppService(_repositoryBase);
         }
 
         // GET api/hotels

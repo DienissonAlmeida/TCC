@@ -1,3 +1,67 @@
-<p>
-  carslist works!
-</p>
+<div class="card">
+  <div class="header">
+    <h2 class="title">Carros</h2>
+  </div>
+  <div class="content">
+    <form #f="ngForm">
+
+      <div class="row">
+          <div class="form-group col-sm-2">
+            <label>Modelo:</label>
+            <input
+              [(ngModel)]="filter.model"
+              name="model"
+              class="form-control"
+            />
+        </div>
+
+          <div class="form-group col-sm-2">
+            <label>Cidade:</label>
+            <input
+              [(ngModel)]="filter.model"
+              name="model"
+              class="form-control"
+            />
+          </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label>To:</label>
+        <input [(ngModel)]="filter.to" name="to" class="form-control">
+      </div> -->
+
+      <div class="form-group">
+        <!-- <button (click)="search()" [disabled]="!f?.valid" class="btn btn-default">
+          Search
+        </button> -->
+        <a [routerLink]="['../hotel', 'new']" class="btn btn-default">New</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="card" *ngIf="carList">
+  <table class="table table-contensed">
+    <thead>
+      <tr>
+        <th>Modelo</th>
+        <th>Marca</th>
+        <th>Passageiros</th>
+        <th>Cidade</th>
+      </tr>
+    </thead>
+    <tr
+      *ngFor="let item of (carList | filterList: filter.model)"
+      [class.active]="item === selectedCar"
+    >
+      <td>{{ item.model }}</td>
+      <td>{{ item.brand }}</td>
+      <td>{{ item.passengers }}</td>
+      <td>{{ item.city }}</td>
+      <td>
+        <a [routerLink]="['../hotel', item.id]">Details</a> |
+        <a (click)="select(item)">Select</a>
+      </td>
+    </tr>
+  </table>
+</div>

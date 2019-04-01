@@ -6,4 +6,5 @@ export class Car {
   transmission: string;
   airconditioning: boolean;
   Photos: string[];
+  city: string;
 }
