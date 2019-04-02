@@ -5,6 +5,7 @@ using TestEstrategyTurism.Application.Features.Cars;
 using TestEstrategyTurism.Data.Context;
 using TestEstrategyTurism.Data.Features;
 using TestEstrategyTurism.Data.Features.Cars;
+using TestEstrategyTurism.Domain;
 using TestEstrategyTurism.Domain.Features;
 using TestEstrategyTurism.Domain.Features.Cars;
 

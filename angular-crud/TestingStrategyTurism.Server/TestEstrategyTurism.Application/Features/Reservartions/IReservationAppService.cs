@@ -9,5 +9,7 @@ namespace TestEstrategyTurism.Application.Features.Reservartions
     public interface IReservationAppService
     {
         Task<List<Reservation>> GetReservations();
+
+        Task<Reservation> Post(Reservation reservation);
     }
 }

@@ -4,8 +4,7 @@ using System.Threading.Tasks;
 using TestEstrategyTurism.Application;
 using TestEstrategyTurism.Data.Context;
 using TestEstrategyTurism.Data.Features;
-using TestEstrategyTurism.Data.Features.Hotels;
-using TestEstrategyTurism.Domain.Features;
+using TestEstrategyTurism.Domain;
 using TestEstrategyTurism.Domain.Features.Hotels;
 
 namespace TestingStrategyTurism.API.Controllers

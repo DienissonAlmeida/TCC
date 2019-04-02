@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using TestEstrategyTurism.Application.Features.Reservartions;
 using TestEstrategyTurism.Data.Context;
 using TestEstrategyTurism.Data.Features;
-using TestEstrategyTurism.Domain.Features;
+using TestEstrategyTurism.Domain;
 using TestEstrategyTurism.Domain.Features.Reservations;
 
 namespace TestingStrategyTurism.API.Controllers.Features.Reservations
@@ -29,6 +29,12 @@ namespace TestingStrategyTurism.API.Controllers.Features.Reservations
         public async Task<ActionResult<IEnumerable<Reservation>>> Get()
         {
             return await _reservationAppService.GetReservations();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Reservation>> PostAsync([FromBody] Reservation reservation)
+        {
+            return await _reservationAppService.Post(reservation);
         }
     }
 }

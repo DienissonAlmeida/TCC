@@ -21,7 +21,6 @@ namespace TestEstrategyTurism.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Hotel>().Property(x => x.Id).ValueGeneratedOnAdd();
 
             modelBuilder.ApplyConfiguration(new HotelEntityConfiguration()).Entity<Hotel>()
                 .HasData(
@@ -36,7 +35,6 @@ namespace TestEstrategyTurism.Data.Context
                     new Hotel { Id = 9, Name = "Prodigy Hotel Santos Dumont Airport", City = "Rio de Janeiro", Daily = 338 }
                     );
 
-            //modelBuilder.Entity<Car>().Property(x => x.Id).ValueGeneratedOnAdd();
 
             modelBuilder.ApplyConfiguration(new CarEntityConfiguration()).Entity<Car>()
                 .HasData(

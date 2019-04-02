@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Domain.Features;
+using TestEstrategyTurism.Domain;
 
 namespace TestEstrategyTurism.Data.Features
 {
@@ -19,6 +17,13 @@ namespace TestEstrategyTurism.Data.Features
         public Task<List<T>> GetAll()
         {
             return _context.Set<T>().AsNoTracking().ToListAsync();
+        }
+
+        public async Task<T> Post(T entity)
+        {
+            var newCustomer =  _context.Set<T>().Add(entity).Entity;
+            await _context.SaveChangesAsync();
+            return newCustomer;
         }
     }
 }

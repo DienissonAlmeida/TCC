@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using TestEstrategyTurism.Domain;
 using TestEstrategyTurism.Domain.Features;
 using TestEstrategyTurism.Domain.Features.Reservations;
 
@@ -19,6 +20,11 @@ namespace TestEstrategyTurism.Application.Features.Reservartions
         public Task<List<Reservation>> GetReservations()
         {
             return _hotelRepository.GetAll();
+        }
+
+        public Task<Reservation> Post(Reservation reservation)
+        {
+            return _hotelRepository.Post(reservation);
         }
     }
 }

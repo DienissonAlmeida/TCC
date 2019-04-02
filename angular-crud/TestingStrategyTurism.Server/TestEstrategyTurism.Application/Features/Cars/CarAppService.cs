@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain.Features;
+using TestEstrategyTurism.Domain;
 using TestEstrategyTurism.Domain.Features.Cars;
 
 namespace TestEstrategyTurism.Application.Features.Cars
