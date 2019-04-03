@@ -11,4 +11,4 @@ export const FLIGHT_ROUTES: Routes = [
     path: 'flight/:id',
     component: FlightEditComponent
   }
-]
+];
