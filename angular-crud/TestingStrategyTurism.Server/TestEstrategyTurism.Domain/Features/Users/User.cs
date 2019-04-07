@@ -8,6 +8,6 @@ namespace TestEstrategyTurism.Domain.Features.Users
     {
         public string Name { get; set; }
 
-        public string Cnpj { get; set; }
+        public string Cpf { get; set; }
     }
 }

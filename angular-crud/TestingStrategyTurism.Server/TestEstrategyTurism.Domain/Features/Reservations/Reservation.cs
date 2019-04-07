@@ -9,6 +9,8 @@ namespace TestEstrategyTurism.Domain.Features.Reservations
 {
     public class Reservation : Entity
     {
+        public string Name { get; set; }
+
         public Hotel Hotel { get; set; }
 
         public int HotelId { get; set; }
@@ -21,6 +23,5 @@ namespace TestEstrategyTurism.Domain.Features.Reservations
 
         public int UserId { get; set; }
 
-        public teste MyProperty { get; set; }
     }
 }
