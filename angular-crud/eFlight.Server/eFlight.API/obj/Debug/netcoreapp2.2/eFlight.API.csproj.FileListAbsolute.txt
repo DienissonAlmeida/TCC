@@ -1,0 +1,16 @@
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.csprojAssemblyReference.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.RazorAssemblyInfo.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.RazorAssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\appsettings.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight.API.deps.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight.API.runtimeconfig.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight.API.runtimeconfig.dev.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight.API.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight.API.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.RazorTargetAssemblyInfo.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.csproj.CopyComplete
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.API\obj\Debug\netcoreapp2.2\eFlight.API.pdb

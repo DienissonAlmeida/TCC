@@ -1,0 +1,8 @@
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight..Domain.deps.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight..Domain.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\eFlight..Domain.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.2\eFlight..Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.2\eFlight..Domain.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.2\eFlight..Domain.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.2\eFlight..Domain.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.2\eFlight..Domain.pdb

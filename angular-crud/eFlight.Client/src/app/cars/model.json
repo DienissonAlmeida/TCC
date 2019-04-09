@@ -1,0 +1,35 @@
+{
+  "title": "Carro",
+  "entity": "carro",
+  "api": {
+    "url": "http://www.angular.at/api/cars"
+  },
+  "filter": [
+    "modelo"
+  ],
+  "fields": [
+    {
+      "name": "id",
+      "label": "Id",
+      "isId": true,
+      "readonly": true,
+      "type": "number"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "label": "Name"
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "label": "City"
+    },
+    {
+      "name": "stars",
+      "type": "string",
+      "control": "number",
+      "label": "Stars"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\bin\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.deps.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\bin\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\bin\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Domain\obj\Debug\netcoreapp2.1\TestEstrategyTurism.Domain.pdb
