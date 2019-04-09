@@ -9,8 +9,8 @@ using TestEstrategyTurism.Data.Context;
 namespace TestingStrategyTurism.API.Migrations
 {
     [DbContext(typeof(TestingEstrategyTurismDbContext))]
-    [Migration("20190407124404_User")]
-    partial class User
+    [Migration("20190407182844_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -237,12 +237,20 @@ namespace TestingStrategyTurism.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Cpf = "03198210054",
+                            Name = "Dienisson"
+                        });
                 });
 
             modelBuilder.Entity("TestEstrategyTurism.Domain.Features.Reservations.Reservation", b =>
                 {
                     b.HasOne("TestEstrategyTurism.Domain.Features.Cars.Car", "Car")
-                        .WithMany("MyProperty")
+                        .WithMany("Reservations")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -252,7 +260,7 @@ namespace TestingStrategyTurism.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("TestEstrategyTurism.Domain.Features.Users.User", "User")
-                        .WithMany()
+                        .WithMany("Reservations")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -20,34 +20,37 @@ export class ReservationEditComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params
-      .pipe(
-        map(p => p["id"]),
-        switchMap(id => {
-          if (id === "new") return of(new Reservation());
-          return this.reservationService.findById(id);
-        })
-      )
-      .subscribe(
-        reservation => {
-          this.reservation = reservation;
-          this.errors = "";
-        },
-        err => {
-          this.errors = "Error loading";
-        }
-      );
-  }
 
-  save() {
-    this.reservationService.save(this.reservation).subscribe(
-      reservation => {
-        this.reservation = reservation;
-        this.errors = "Save was successful!";
-      },
-      err => {
-        this.errors = "Error saving";
-      }
-    );
   }
+  // ngOnInit() {
+  //   this.route.params
+  //     .pipe(
+  //       map(p => p["id"]),
+  //       switchMap(id => {
+  //         if (id === "new") return of(new Reservation());
+  //         return this.reservationService.findById(id);
+  //       })
+  //     )
+  //     .subscribe(
+  //       reservation => {
+  //         this.reservation = reservation;
+  //         this.errors = "";
+  //       },
+  //       err => {
+  //         this.errors = "Error loading";
+  //       }
+  //     );
+  // }
+
+  // save() {
+  //   this.reservationService.save(this.reservation).subscribe(
+  //     reservation => {
+  //       this.reservation = reservation;
+  //       this.errors = "Save was successful!";
+  //     },
+  //     err => {
+  //       this.errors = "Error saving";
+  //     }
+  //   );
+  // }
 }

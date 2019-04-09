@@ -10,21 +10,21 @@ namespace TestEstrategyTurism.Application.Features.Reservartions
 {
     public class ReservationAppService : IReservationAppService
     {
-        private IRepositoryBase<Reservation> _hotelRepository;
+        private IRepositoryBase<Reservation> _reservationRepository;
 
         public ReservationAppService(IRepositoryBase<Reservation> repositoryBase)
         {
-            _hotelRepository = repositoryBase;
+            _reservationRepository = repositoryBase;
         }
 
         public Task<List<Reservation>> GetReservations()
         {
-            return _hotelRepository.GetAll();
+            return _reservationRepository.GetAll();
         }
 
         public Task<Reservation> Post(Reservation reservation)
         {
-            return _hotelRepository.Post(reservation);
+            return _reservationRepository.Post(reservation);
         }
     }
 }

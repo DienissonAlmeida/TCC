@@ -12,6 +12,10 @@ namespace TestEstrategyTurism.Data.Features.Reservations
         public void Configure(EntityTypeBuilder<Reservation> builder)
         {
             builder.HasKey(key => key.Id);
+
+            //builder.HasOne(p => p.Hotel).WithMany();
+            //builder.HasOne(p => p.User).WithMany();
+            //builder.HasOne(p => p.Car).WithMany();
         }
     }
 }

@@ -12,6 +12,8 @@ namespace TestEstrategyTurism.Data.Features.Users
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasKey(k => k.Id);
+
+            //builder.HasMany(b => b.Reservations).WithOne(x => x.User).HasForeignKey(x => x.UserId);
         }
     }
 }

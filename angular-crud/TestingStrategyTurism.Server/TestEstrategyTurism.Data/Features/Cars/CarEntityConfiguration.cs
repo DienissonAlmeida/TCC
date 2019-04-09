@@ -15,6 +15,9 @@ namespace TestEstrategyTurism.Data.Features.Cars
             builder.Property(p => p.Photos);
             builder.Property(p => p.Transmission).HasMaxLength(10);
             builder.Property(p => p.AirConditioning);
+
+            //builder.HasMany(b => b.Reservations).WithOne(x => x.Car).HasForeignKey(x => x.CarId);
+
         }
     }
 }

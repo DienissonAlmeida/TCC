@@ -14,6 +14,6 @@ namespace TestEstrategyTurism.Domain.Features.Hotels
 
         public int Stars { get; set; }
 
-        public List<Reservation> Reservations { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

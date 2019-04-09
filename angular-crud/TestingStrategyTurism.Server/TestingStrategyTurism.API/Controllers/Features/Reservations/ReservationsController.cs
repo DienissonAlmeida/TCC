@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TestEstrategyTurism.Application.Features.Reservartions;
 using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Data.Features;
-using TestEstrategyTurism.Domain;
+using RsvRepo = TestEstrategyTurism.Domain.Features.Reservations;
 using TestEstrategyTurism.Domain.Features.Reservations;
+using TestEstrategyTurism.Data.Features.Reservations;
+using TestEstrategyTurism.Domain;
+using TestEstrategyTurism.Data.Features;
 
 namespace TestingStrategyTurism.API.Controllers.Features.Reservations
 {
@@ -14,14 +16,14 @@ namespace TestingStrategyTurism.API.Controllers.Features.Reservations
     public class ReservationsController : ControllerBase
     {
         private IReservationAppService _reservationAppService;
-        private IRepositoryBase<Reservation> _repositoryBase;
+        private IRepositoryBase<Reservation>  _repository;
         private readonly TestingEstrategyTurismDbContext _context;
 
         public ReservationsController(TestingEstrategyTurismDbContext context)
         {
             _context = context;
-            _repositoryBase = new RepositoryBase<Reservation>(_context);
-            _reservationAppService = new ReservationAppService(_repositoryBase);
+            _repository = new RepositoryReservation(_context);
+            _reservationAppService = new ReservationAppService(_repository);
         }
 
         // GET api/cars

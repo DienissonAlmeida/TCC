@@ -8,13 +8,13 @@ namespace TestEstrategyTurism.Data.Features
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        private TestingEstrategyTurismDbContext _context;
+        protected TestingEstrategyTurismDbContext _context;
 
         public RepositoryBase(TestingEstrategyTurismDbContext testingEstrategyTurismDbContext)
         {
             _context = testingEstrategyTurismDbContext;
         }
-        public Task<List<T>> GetAll()
+        public virtual Task<List<T>> GetAll()
         {
             return _context.Set<T>().AsNoTracking().ToListAsync();
         }

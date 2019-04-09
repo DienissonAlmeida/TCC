@@ -7,6 +7,10 @@ namespace TestEstrategyTurism.Domain.Features.Cars
 {
     public class Car : Entity
     {
+        public Car()
+        {
+
+        }
         public string Model { get; set; }
 
         public string Brand { get; set; }
@@ -19,6 +23,6 @@ namespace TestEstrategyTurism.Domain.Features.Cars
 
         public string Photos { get; set; }
 
-        public List<Reservation> MyProperty { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }
