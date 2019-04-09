@@ -738,16 +738,6 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
-      },
-      "eFlight..Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/eFlight..Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/eFlight..Domain.dll": {}
-        }
       }
     }
   },
@@ -2966,18 +2956,13 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
-    },
-    "eFlight..Domain/1.0.0": {
-      "type": "project",
-      "path": "../TestEstrategyTurism.Domain/eFlight..Domain.csproj",
-      "msbuildProject": "../TestEstrategyTurism.Domain/eFlight..Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
       "Microsoft.EntityFrameworkCore >= 2.2.3",
-      "Microsoft.NETCore.App >= 2.2.0",
-      "eFlight..Domain >= 1.0.0"
+      "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
   "packageFolders": {
@@ -2987,11 +2972,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Data\\eFlight.Infra.Data.csproj",
+      "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Infra.Data\\eFlight.Infra.Data.csproj",
       "projectName": "eFlight.Infra.Data",
-      "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Data\\eFlight.Infra.Data.csproj",
+      "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Infra.Data\\eFlight.Infra.Data.csproj",
       "packagesPath": "C:\\Users\\Dienisson\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Data\\obj\\",
+      "outputPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3010,8 +2995,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
-              "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj"
+            "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
+              "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj"
             }
           }
         }
@@ -3043,5 +3028,16 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

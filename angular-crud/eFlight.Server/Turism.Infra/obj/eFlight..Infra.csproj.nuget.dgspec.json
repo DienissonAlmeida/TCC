@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\Turism.Infra\\eFlight..Infra.csproj": {}
+    "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\Turism.Infra\\eFlight..Infra.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\Turism.Infra\\eFlight..Infra.csproj": {
+    "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\Turism.Infra\\eFlight..Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\Turism.Infra\\eFlight..Infra.csproj",
+        "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\Turism.Infra\\eFlight..Infra.csproj",
         "projectName": "eFlight..Infra",
-        "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\Turism.Infra\\eFlight..Infra.csproj",
+        "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\Turism.Infra\\eFlight..Infra.csproj",
         "packagesPath": "C:\\Users\\Dienisson\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\Turism.Infra\\obj\\",
+        "outputPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\Turism.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

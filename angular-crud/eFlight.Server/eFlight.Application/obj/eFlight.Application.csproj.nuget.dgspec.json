@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Application\\eFlight.Application.csproj": {}
+    "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Application\\eFlight.Application.csproj": {
+    "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Application\\eFlight.Application.csproj",
+        "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj",
         "projectName": "eFlight.Application",
-        "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Application\\eFlight.Application.csproj",
+        "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj",
         "packagesPath": "C:\\Users\\Dienisson\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Application\\obj\\",
+        "outputPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,62 +30,10 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
-                "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj"
+              "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
+                "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj"
               }
             }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
-        "projectName": "eFlight..Domain",
-        "projectPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
-        "packagesPath": "C:\\Users\\Dienisson\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\TCC\\angular-crud\\TestingStrategyTurism.Server\\TestEstrategyTurism.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Dienisson\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {}
           }
         },
         "warningProperties": {
