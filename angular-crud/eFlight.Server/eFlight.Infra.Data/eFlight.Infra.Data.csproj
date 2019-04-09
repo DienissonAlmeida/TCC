@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestEstrategyTurism.Domain\eFlight..Domain.csproj" />
+    <ProjectReference Include="..\eFlight.Domain\eFlight.Domain.csproj" />
   </ItemGroup>
 
 </Project>
