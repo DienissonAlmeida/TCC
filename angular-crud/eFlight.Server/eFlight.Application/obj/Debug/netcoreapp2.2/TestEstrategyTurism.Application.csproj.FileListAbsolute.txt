@@ -1,0 +1,15 @@
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\bin\Debug\netcoreapp2.2\TestEstrategyTurism.Application.deps.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\bin\Debug\netcoreapp2.2\TestEstrategyTurism.Application.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\bin\Debug\netcoreapp2.2\TestEstrategyTurism.Application.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\bin\Debug\netcoreapp2.2\TestEstrategyTurism.Domain.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\bin\Debug\netcoreapp2.2\TestEstrategyTurism.Domain.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.csprojAssemblyReference.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.csproj.CopyComplete
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\TestEstrategyTurism.Application.pdb
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\TestEstrategyTurism.Application.deps.json
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\TestEstrategyTurism.Application.dll
+C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\bin\netcoreapp2.2\TestEstrategyTurism.Application.pdb
