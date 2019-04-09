@@ -23,8 +23,8 @@ namespace eFlight.API
         {
             services.AddDbContext<eFlightDbContext>(opt =>
             {
-                opt.UseSqlServer(Configuration.GetConnectionString("TestingEstrategyTurismDbContext"),
-                    b => b.MigrationsAssembly("TestingStrategyTurism.API"));
+                opt.UseSqlServer(Configuration.GetConnectionString("eFlightDbContext"),
+                    b => b.MigrationsAssembly("eFlight.API"));
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).

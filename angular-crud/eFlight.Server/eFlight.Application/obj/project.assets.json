@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "eFlight.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/eFlight.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eFlight.Domain.dll": {}
+        }
       }
     }
   },
@@ -477,7 +487,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.2.0": {
-      "sha512": "qIrVLupwT2NYTrf7KM7Nh+mJr36V5MITVRjyGOByVVCwGmQgQmI/6bjZYQv+QdExi4Cm87eCKJX9FdT6nc00Xg==",
+      "sha512": "OK/H8p9Ig6mLMITjXJ4VOewrJg/TU+dAPHE4BdMWMv+8COzBehf7XF1+DofKkmqdHpO2cJoS5Sc9PEZ6PKCbsg==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.2.0",
       "files": [
@@ -678,16 +688,21 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "eFlight.Domain/1.0.0": {
+      "type": "project",
+      "path": "../eFlight.Domain/eFlight.Domain.csproj",
+      "msbuildProject": "../eFlight.Domain/eFlight.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "eFlight.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dienisson\\.nuget\\packages\\": {},
+    "C:\\Users\\dienisson.chinelatto\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -696,14 +711,14 @@
       "projectUniqueName": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj",
       "projectName": "eFlight.Application",
       "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\eFlight.Application.csproj",
-      "packagesPath": "C:\\Users\\Dienisson\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\dienisson.chinelatto\\.nuget\\packages\\",
       "outputPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dienisson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dienisson.chinelatto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -711,13 +726,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.nddigital.local/api/v2/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj": {
-              "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj"
+            "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Domain\\eFlight.Domain.csproj": {
+              "projectPath": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\eFlight.Domain\\eFlight.Domain.csproj"
             }
           }
         }
@@ -745,16 +761,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Projetos\\TCC\\angular-crud\\eFlight.Server\\TestEstrategyTurism.Domain\\eFlight..Domain.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

@@ -8,3 +8,13 @@ C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Ap
 C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\eFlight.Application.csproj.CopyComplete
 C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\eFlight.Application.dll
 C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestEstrategyTurism.Application\obj\Debug\netcoreapp2.2\eFlight.Application.pdb
+C:\Projetos\TCC\angular-crud\eFlight.Server\bin\netcoreapp2.2\eFlight.Application.deps.json
+C:\Projetos\TCC\angular-crud\eFlight.Server\bin\netcoreapp2.2\eFlight.Application.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\bin\netcoreapp2.2\eFlight.Application.pdb
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.csprojAssemblyReference.cache
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.csproj.CopyComplete
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Application\obj\Debug\netcoreapp2.2\eFlight.Application.pdb

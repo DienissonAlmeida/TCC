@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="TestingStrategyTurism.DB.dll" />
-			<Metadata Name="FileName" Value="C:\PROJETOS\TCC\ANGULAR-CRUD\TESTINGSTRATEGYTURISM.SERVER\TESTINGSTRATEGYTURISM.DB\OBJ\DEBUG\TESTINGSTRATEGYTURISM.DB.DLL" />
+			<Metadata Name="FileName" Value="C:\PROJETOS\TCC\ANGULAR-CRUD\EFLIGHT.SERVER\EFLIGHT.DB\OBJ\DEBUG\TESTINGSTRATEGYTURISM.DB.DLL" />
 			<Metadata Name="AssemblyName" Value="TestingStrategyTurism.DB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\TestingStrategyTurism.DB\obj\Debug\TestingStrategyTurism.DB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.DB\obj\Debug\TestingStrategyTurism.DB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
