@@ -1,16 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Domain;
+using eFlight.Domain;
+using eFlight.Data.Context;
 
-namespace TestEstrategyTurism.Data.Features
+namespace eFlight.Data.Features
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        protected TestingEstrategyTurismDbContext _context;
+        protected eFlightDbContext _context;
 
-        public RepositoryBase(TestingEstrategyTurismDbContext testingEstrategyTurismDbContext)
+        public RepositoryBase(eFlightDbContext testingEstrategyTurismDbContext)
         {
             _context = testingEstrategyTurismDbContext;
         }

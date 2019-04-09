@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Application.Features.Reservartions;
-using TestEstrategyTurism.Data.Context;
-using RsvRepo = TestEstrategyTurism.Domain.Features.Reservations;
-using TestEstrategyTurism.Domain.Features.Reservations;
-using TestEstrategyTurism.Data.Features.Reservations;
-using TestEstrategyTurism.Domain;
-using TestEstrategyTurism.Data.Features;
+using eFlight.Application.Features.Reservartions;
+using eFlight.Data.Context;
+using RsvRepo = eFlight.Domain.Features.Reservations;
+using eFlight.Domain.Features.Reservations;
+using eFlight.Data.Features.Reservations;
+using eFlight.Domain;
+using eFlight.Data.Features;
 
-namespace TestingStrategyTurism.API.Controllers.Features.Reservations
+namespace eFlight.API.Controllers.Features.Reservations
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,9 +17,9 @@ namespace TestingStrategyTurism.API.Controllers.Features.Reservations
     {
         private IReservationAppService _reservationAppService;
         private IRepositoryBase<Reservation>  _repository;
-        private readonly TestingEstrategyTurismDbContext _context;
+        private readonly eFlightDbContext _context;
 
-        public ReservationsController(TestingEstrategyTurismDbContext context)
+        public ReservationsController(eFlightDbContext context)
         {
             _context = context;
             _repository = new RepositoryReservation(_context);

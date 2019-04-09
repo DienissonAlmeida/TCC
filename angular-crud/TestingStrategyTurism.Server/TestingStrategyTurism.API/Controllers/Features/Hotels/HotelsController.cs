@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Application;
-using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Data.Features;
-using TestEstrategyTurism.Domain;
-using TestEstrategyTurism.Domain.Features.Hotels;
+using eFlight.Application;
+using eFlight.Data.Context;
+using eFlight.Data.Features;
+using eFlight.Domain;
+using eFlight.Domain.Features.Hotels;
 
-namespace TestingStrategyTurism.API.Controllers
+namespace eFlight.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -15,8 +15,8 @@ namespace TestingStrategyTurism.API.Controllers
     {
         private IHotelAppService _hotelAppService;
         private IRepositoryBase<Hotel> _repositoryBase;
-        private readonly TestingEstrategyTurismDbContext _context;
-        public HotelsController(TestingEstrategyTurismDbContext context)
+        private readonly eFlightDbContext _context;
+        public HotelsController(eFlightDbContext context)
         {
             _context = context;
             _repositoryBase = new RepositoryBase<Hotel>(_context);

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain;
-using TestEstrategyTurism.Domain.Features;
-using TestEstrategyTurism.Domain.Features.Reservations;
+using eFlight.Domain;
+using eFlight.Domain.Features;
+using eFlight.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Application.Features.Reservartions
+namespace eFlight.Application.Features.Reservartions
 {
     public class ReservationAppService : IReservationAppService
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TestEstrategyTurism.Domain.Features.Reservations;
+using eFlight.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Domain.Features.Users
+namespace eFlight.Domain.Features.Users
 {
     public class User : Entity
     {

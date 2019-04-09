@@ -1,18 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using eFlight.Data.Context;
+using eFlight.Data.Features;
+using eFlight.Domain.Features.Reservations;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Domain.Features.Hotels;
-using TestEstrategyTurism.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Data.Features.Reservations
+namespace eFlight.Data.Features.Reservations
 {
     public class RepositoryReservation : RepositoryBase<Reservation>
     {
-        public RepositoryReservation(TestingEstrategyTurismDbContext testingEstrategyTurismDbContext) : base(testingEstrategyTurismDbContext)
+        public RepositoryReservation(eFlightDbContext testingEstrategyTurismDbContext) : base(testingEstrategyTurismDbContext)
         {
         }
 

@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using eFlight.Application.Features.Cars;
+using eFlight.Data.Context;
+using eFlight.Data.Features;
+using eFlight.Domain;
+using eFlight.Domain.Features.Cars;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Application.Features.Cars;
-using TestEstrategyTurism.Data.Context;
-using TestEstrategyTurism.Data.Features;
-using TestEstrategyTurism.Data.Features.Cars;
-using TestEstrategyTurism.Domain;
-using TestEstrategyTurism.Domain.Features;
-using TestEstrategyTurism.Domain.Features.Cars;
 
-namespace TestingStrategyTurism.API.Controllers.Features.Cars
+namespace eFlight.API.Controllers.Features.Cars
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,9 +15,9 @@ namespace TestingStrategyTurism.API.Controllers.Features.Cars
     {
         private ICarAppService _carAppService;
         private IRepositoryBase<Car> _repositoryBase;
-        private readonly TestingEstrategyTurismDbContext _context;
+        private readonly eFlightDbContext _context;
 
-        public CarsController(TestingEstrategyTurismDbContext context)
+        public CarsController(eFlightDbContext context)
         {
             _context = context;
             _repositoryBase = new RepositoryBase<Car>(_context);

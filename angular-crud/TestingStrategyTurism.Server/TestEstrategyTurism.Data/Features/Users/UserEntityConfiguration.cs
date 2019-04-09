@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TestEstrategyTurism.Domain.Features.Users;
+using eFlight.Domain.Features.Users;
 
-namespace TestEstrategyTurism.Data.Features.Users
+namespace eFlight.Data.Features.Users
 {
     public class UserEntityConfiguration : IEntityTypeConfiguration<User>
     {

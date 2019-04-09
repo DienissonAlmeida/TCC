@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain.Features.Hotels;
+using eFlight.Domain.Features.Hotels;
 
-namespace TestEstrategyTurism.Application
+namespace eFlight.Application
 {
     public interface IHotelAppService
     {

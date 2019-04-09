@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestEstrategyTurism.Domain
+namespace eFlight.Domain
 {
     public abstract class Entity
     {

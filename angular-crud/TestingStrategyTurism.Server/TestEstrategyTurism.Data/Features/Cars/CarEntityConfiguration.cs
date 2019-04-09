@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TestEstrategyTurism.Domain.Features.Cars;
+using eFlight.Domain.Features.Cars;
 
-namespace TestEstrategyTurism.Data.Features.Cars
+namespace eFlight.Data.Features.Cars
 {
     public class CarEntityConfiguration : IEntityTypeConfiguration<Car>
     {

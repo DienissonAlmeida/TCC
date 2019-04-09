@@ -1,4 +1,4 @@
-﻿namespace TestEstrategyTurism.Domain.Features.Cars
+﻿namespace eFlight.Domain.Features.Cars
 {
     public enum Transmission
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using TestEstrategyTurism.Domain.Features.Reservations;
+using eFlight.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Domain.Features.Cars
+namespace eFlight.Domain.Features.Cars
 
 {
     public class Car : Entity

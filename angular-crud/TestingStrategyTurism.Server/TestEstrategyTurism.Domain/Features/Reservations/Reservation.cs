@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TestEstrategyTurism.Domain.Features.Cars;
-using TestEstrategyTurism.Domain.Features.Hotels;
-using TestEstrategyTurism.Domain.Features.Users;
+using eFlight.Domain.Features.Cars;
+using eFlight.Domain.Features.Hotels;
+using eFlight.Domain.Features.Users;
 
-namespace TestEstrategyTurism.Domain.Features.Reservations
+namespace eFlight.Domain.Features.Reservations
 {
     public class Reservation : Entity
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain.Features.Reservations;
+using eFlight.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Domain
+namespace eFlight.Domain
 {
     public interface IRepositoryBase<T>
     {

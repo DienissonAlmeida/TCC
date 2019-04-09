@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain;
-using TestEstrategyTurism.Domain.Features;
-using TestEstrategyTurism.Domain.Features.Hotels;
+using eFlight.Domain;
+using eFlight.Domain.Features;
+using eFlight.Domain.Features.Hotels;
 
-namespace TestEstrategyTurism.Application
+namespace eFlight.Application
 {
     public class HotelAppService : IHotelAppService
     {

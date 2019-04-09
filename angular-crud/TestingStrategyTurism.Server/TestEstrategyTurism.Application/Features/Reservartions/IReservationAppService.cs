@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using TestEstrategyTurism.Domain.Features.Reservations;
+using eFlight.Domain.Features.Reservations;
 
-namespace TestEstrategyTurism.Application.Features.Reservartions
+namespace eFlight.Application.Features.Reservartions
 {
     public interface IReservationAppService
     {
