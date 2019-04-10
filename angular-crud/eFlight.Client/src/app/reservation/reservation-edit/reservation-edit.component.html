@@ -1,6 +1,6 @@
 <div class="card">
     <div class="header">
-        <h1 class="title">reservation Detail</h1>
+        <h1 class="title">Reservation Detail</h1>
     </div>
     <div class="content">
 
@@ -8,24 +8,24 @@
 
         <form *ngIf="reservation">
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Id:</label>
                 <input [(ngModel)]="reservation.id" name="id" class="form-control">
+            </div> -->
+
+            <div class="form-group">
+                <label>Nome:</label>
+                <input [(ngModel)]="reservation.name" name="from" class="form-control">
             </div>
 
             <div class="form-group">
-                <label>From:</label>
-                <input [(ngModel)]="reservation.from" name="from" class="form-control">
+                <label>Hotel:</label>
+                <input [(ngModel)]="reservation.hotel" name="to" class="form-control">
             </div>
 
             <div class="form-group">
-                <label>To:</label>
-                <input [(ngModel)]="reservation.to" name="to" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label>Date:</label>
-                <input [(ngModel)]="reservation.date" name="date" class="form-control">
+                <label>Carro:</label>
+                <input [(ngModel)]="reservation.car" name="date" class="form-control">
             </div>
 
             <div class="form-group">

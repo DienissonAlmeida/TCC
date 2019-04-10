@@ -12,7 +12,7 @@ export class ReservationListComponent {
 
     filter = new ReservationFilter();
     selectedReservation: Reservation;
-    reservationList: any[];
+    reservationList: Reservation[];
 
     // get reservationList(): Reservation[] {
     //     return this.reservationService.reservationList;

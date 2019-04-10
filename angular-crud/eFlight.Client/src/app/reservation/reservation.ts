@@ -4,8 +4,8 @@ import { User } from "../common/user";
 
 export class Reservation {
     id: number;
-    Name: string;
-    Car: Car;
-    Hotel: Hotel;
-    User: User;
+    name: string;
+    car: Car;
+    hotel: Hotel;
+    user: User;
 }

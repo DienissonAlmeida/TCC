@@ -1,4 +1,0 @@
-C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\Turism.Infra\obj\Debug\netcoreapp2.1\Turism.Infra.csprojAssemblyReference.cache
-C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\Turism.Infra\obj\Debug\netcoreapp2.1\Turism.Infra.csproj.CoreCompileInputs.cache
-C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\Turism.Infra\obj\Debug\netcoreapp2.1\Turism.Infra.AssemblyInfoInputs.cache
-C:\Projetos\TCC\angular-crud\TestingStrategyTurism.Server\Turism.Infra\obj\Debug\netcoreapp2.1\Turism.Infra.AssemblyInfo.cs

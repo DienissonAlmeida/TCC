@@ -46,3 +46,7 @@
 /angular-crud/eFlight.Server/eFlight.DB/bin/Debug
 /angular-crud/eFlight.Server/eFlight.Domain/obj/Debug/netcoreapp2.2
 /angular-crud/eFlight.Server/eFlight.Domain/obj
+/angular-crud/eFlight.Server/.vs/eFlight.Server/config/applicationhost.config
+/angular-crud/eFlight.Server/.vs/eFlight.Server/v16/Server/sqlite3
+/angular-crud/eFlight.Server/eFlight.DB
+/angular-crud/eFlight.Server/.vs/eFlight.Server/v16/.suo

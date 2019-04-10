@@ -37,21 +37,20 @@
       <table class="table table-contensed" >
         <thead>
         <tr>
-            <th>Id</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Date</th>
+            <th>Name</th>
+            <th>Hotel</th>
+            <th>Car</th>
+            <th>User</th>
         </tr>
         </thead>
-        <tr *ngFor="let item of reservationList" [class.active]="item === selectedReservation">
-            <td>{{item.id}}</td>
-            <td>{{item.Name}}</td>
-            <!-- <td>{{item.to}}</td>
-            <td>{{item.date | date}}</td> -->
+        <tr *ngFor="let reservation of reservationList" [class.active]="reservation === selectedReservation">
+            <td>{{reservation.name}}</td>
+            <td>{{reservation.hotel.name}}</td>
+            <td>{{reservation.car.model}}</td>
+            <td>{{reservation.user.name}}</td>
             <td>
-
-                <a [routerLink]="['../reservation', item.id ]">Details</a> |
-                <a (click)="select(item)">Select</a>
+                <a [routerLink]="['../reservation', reservation.id ]">Details</a> |
+                <a (click)="select(reservation)">Select</a>
             </td>
         </tr>
       </table>

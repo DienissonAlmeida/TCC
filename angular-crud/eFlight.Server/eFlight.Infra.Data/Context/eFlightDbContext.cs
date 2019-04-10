@@ -5,6 +5,8 @@ using eFlight.Domain.Features.Cars;
 using eFlight.Domain.Features.Reservations;
 using eFlight.Domain.Features.Users;
 using eFlight.Data.Features.Cars;
+using eFlight.Domain.Features.Flights;
+using System;
 
 namespace eFlight.Data.Context
 {
@@ -17,15 +19,35 @@ namespace eFlight.Data.Context
 
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Car> Cars { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Flight> Flights { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             SeedData(modelBuilder);
 
+            CreateRelationships(modelBuilder);
+        }
+
+        private static void CreateRelationships(ModelBuilder modelBuilder)
+        {
             modelBuilder.Entity<User>()
                         .HasMany(c => c.Reservations)
                          .WithOne(e => e.User);
+
+            modelBuilder.Entity<Flight>()
+            .HasMany(c => c.Reservations)
+             .WithOne(e => e.Flight);
+
+            modelBuilder.Entity<Car>()
+                 .HasMany(c => c.Reservations)
+                    .WithOne(e => e.Car);
+
+            modelBuilder.Entity<Hotel>()
+                        .HasMany(c => c.Reservations)
+                          .WithOne(e => e.Hotel);
         }
 
         private void SeedData(ModelBuilder modelBuilder)
@@ -58,6 +80,13 @@ namespace eFlight.Data.Context
                 .HasData(
                 new User { Id = 1, Name = "Dienisson", Cpf = "03198210054" }
                 );
+
+            modelBuilder.ApplyConfiguration(new CarEntityConfiguration()).Entity<Flight>()
+                .HasData(
+                new Flight { Id = 1, Origin = "São Paulo", Destination = "Paris" , Out = DateTime.Now, Return = DateTime.Now.AddDays(10) }
+                );
+
+
             base.OnModelCreating(modelBuilder);
         }
     }
