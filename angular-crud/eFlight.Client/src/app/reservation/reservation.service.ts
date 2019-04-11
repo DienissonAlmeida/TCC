@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ReservationService {
 
-  private URl: string = 'https://localhost:44301/api/reservation';
+  private URl: string = 'https://localhost:44301/api/reservations';
 
   constructor(private _httpClient: HttpClient) { }
 

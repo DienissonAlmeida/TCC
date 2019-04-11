@@ -68,12 +68,12 @@ namespace eFlight.Data.Context
 
             modelBuilder.ApplyConfiguration(new CarEntityConfiguration()).Entity<Car>()
                 .HasData(
-                    new Car { Id = 1, Model = "C4", Brand = "Citroen", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual },
-                    new Car { Id = 2, Model = "New Fiesta", Brand = "Ford", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual },
-                    new Car { Id = 3, Model = "Onix", Brand = "Chevrolet", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual },
-                    new Car { Id = 4, Model = "HB20", Brand = "Hyundai", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual },
-                    new Car { Id = 5, Model = "Gol", Brand = "Volkswagen", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual },
-                    new Car { Id = 6, Model = "Argo", Brand = "Fiat", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual }
+                    new Car { Id = 1, Model = "C4", Brand = "Citroen", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Paris" },
+                    new Car { Id = 2, Model = "New Fiesta", Brand = "Ford", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Madrid" },
+                    new Car { Id = 3, Model = "Onix", Brand = "Chevrolet", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Las Vegas" },
+                    new Car { Id = 4, Model = "HB20", Brand = "Hyundai", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Nova Yorque" },
+                    new Car { Id = 5, Model = "Gol", Brand = "Volkswagen", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Rio de Janeiro" },
+                    new Car { Id = 6, Model = "Argo", Brand = "Fiat", AirConditioning = true, Passengers = 5, Transmission = Transmission.Manual, City = "Paris" }
                     );
 
             modelBuilder.ApplyConfiguration(new CarEntityConfiguration()).Entity<User>()
