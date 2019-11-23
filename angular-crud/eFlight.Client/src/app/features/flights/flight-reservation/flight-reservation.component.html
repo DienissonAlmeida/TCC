@@ -1,0 +1,67 @@
+<div class="card">
+
+  <div class="header">
+    <h2 class="title">Reservas do Voô</h2>
+  </div>
+  <div class="content">
+
+    <form #f="ngForm">
+
+      <div class="form-group">
+        <label>Origem:</label>
+        <input [(ngModel)]="filter.origin" name="from" class="form-control">
+      </div>
+
+      <!-- <div class="form-group">
+        <label>To:</label>
+        <input [(ngModel)]="filter.to" name="to" class="form-control">
+      </div> -->
+
+      <div class="form-group">
+        <!-- <button (click)="search()" [disabled]="!f?.valid" class="btn btn-default">
+          Search
+
+        </button> -->
+        <!-- <a [routerLink]="['../flight','new']" class="btn btn-default">
+            Nova Reserva
+        </a> -->
+
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<div class="card" *ngIf="flightReservationList">
+
+  <table class="table table-contensed">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Data de Partida</th>
+        <th>Data de Retorno</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let flightReservation of flightReservationList"
+      [class.active]="flightReservation === selectedFlightReservation">
+      <td>{{flightReservation.id}}</td>
+      <td>{{flightReservation.description}}</td>
+      <td>{{flightReservation.inputDate | date :'short' }}</td>
+      <td>{{flightReservation.outputDate | date :'short'}}</td>
+
+      <td>
+        <a [routerLink]="['../../flightReservationForm', flightReservation.id]" class="btn btn-default" style="float:right;">
+          Editar Reserva
+        </a>
+        <a> </a>
+        <a (click)="delete(flightReservation.id)" class="btn btn-danger" style="float:right;">
+          Deletar Reserva
+        </a>
+        <!-- <button class="btn btn-default" onclick="showNotification('top','right')">Top Right Notification</button> -->
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- button to trigger the action -->

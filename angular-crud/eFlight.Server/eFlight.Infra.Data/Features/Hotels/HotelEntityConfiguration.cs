@@ -16,7 +16,6 @@ namespace eFlight.Data.Features.Hotels
             builder.Property(p => p.Name).HasMaxLength(50);
             builder.Property(p => p.Stars).HasMaxLength(10);
 
-            //builder.HasMany(b => b.Reservations).WithOne(x => x.Hotel).HasForeignKey(x => x.HotelId);
         }
     }
 }

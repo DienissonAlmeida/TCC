@@ -1,0 +1,13 @@
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\eFlight.Infra.Data.deps.json
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\eFlight.Infra.Data.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\eFlight.Infra.Data.pdb
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\eFlight.Domain.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\eFlight.Domain.pdb
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\bin\Release\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.csprojAssemblyReference.cache
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.AssemblyInfoInputs.cache
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.AssemblyInfo.cs
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.csproj.CopyComplete
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.dll
+C:\Projetos\TCC\angular-crud\eFlight.Server\eFlight.Infra.Data\obj\Release\netcoreapp2.2\eFlight.Infra.Data.pdb

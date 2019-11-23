@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using eFlight.Domain.Features.Reservations;
+﻿using System.Collections.Generic;
 
 namespace eFlight.Domain.Features.Hotels
 {
@@ -14,6 +12,8 @@ namespace eFlight.Domain.Features.Hotels
 
         public int Stars { get; set; }
 
-        public ICollection<Reservation> Reservations { get; set; }
+        public IList<HotelReservation> HotelReservations { get; set; }
+
+        public int AvailableVacancies { get; set; }
     }
 }

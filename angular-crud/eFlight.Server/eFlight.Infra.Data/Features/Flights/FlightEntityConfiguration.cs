@@ -14,8 +14,6 @@ namespace eFlight.Infra.Data.Features.Flights
             builder.HasKey(c => c.Id);
             builder.Property(p => p.Origin);
             builder.Property(p => p.Destination);
-            builder.Property(p => p.Out);
-            builder.Property(p => p.Return);
         }
     }
 }

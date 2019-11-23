@@ -11,7 +11,7 @@ namespace eFlight.Data.Features.Cars
             builder.HasKey(c => c.Id);
             builder.Property(p => p.Model).HasMaxLength(50);
             builder.Property(p => p.Brand).HasMaxLength(50);
-            builder.Property(p => p.Passengers).HasMaxLength(10);
+            builder.Property(p => p.Passenger).HasMaxLength(10);
             builder.Property(p => p.Photos);
             builder.Property(p => p.Transmission).HasMaxLength(10);
             builder.Property(p => p.AirConditioning);

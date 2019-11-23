@@ -15,7 +15,7 @@ namespace eFlight.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.3-servicing-35854")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -27,15 +27,15 @@ namespace eFlight.API.Migrations
 
                     b.Property<bool>("AirConditioning");
 
+                    b.Property<int>("AvailableVacancies");
+
                     b.Property<string>("Brand")
                         .HasMaxLength(50);
-
-                    b.Property<string>("City");
 
                     b.Property<string>("Model")
                         .HasMaxLength(50);
 
-                    b.Property<int>("Passengers")
+                    b.Property<int>("Passenger")
                         .HasMaxLength(10);
 
                     b.Property<string>("Photos");
@@ -45,68 +45,142 @@ namespace eFlight.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cars");
+                    b.ToTable("Car");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Citroen",
-                            City = "Paris",
                             Model = "C4",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
                         },
                         new
                         {
                             Id = 2,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Ford",
-                            City = "Madrid",
                             Model = "New Fiesta",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
                         },
                         new
                         {
                             Id = 3,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Chevrolet",
-                            City = "Las Vegas",
                             Model = "Onix",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
                         },
                         new
                         {
                             Id = 4,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Hyundai",
-                            City = "Nova Yorque",
                             Model = "HB20",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
                         },
                         new
                         {
                             Id = 5,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Volkswagen",
-                            City = "Rio de Janeiro",
                             Model = "Gol",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
                         },
                         new
                         {
                             Id = 6,
                             AirConditioning = true,
+                            AvailableVacancies = 0,
                             Brand = "Fiat",
-                            City = "Paris",
                             Model = "Argo",
-                            Passengers = 5,
+                            Passenger = 5,
                             Transmission = 0
+                        });
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.Cars.CarReservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CarId");
+
+                    b.Property<DateTime>("InputDate");
+
+                    b.Property<string>("Name");
+
+                    b.Property<DateTime>("OutputDate");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.ToTable("CarReservation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CarId = 1,
+                            InputDate = new DateTime(2019, 10, 19, 11, 33, 19, 9, DateTimeKind.Local).AddTicks(3279),
+                            Name = "Dienisson",
+                            OutputDate = new DateTime(2019, 10, 29, 11, 33, 19, 9, DateTimeKind.Local).AddTicks(3337)
+                        });
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.Flights.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CarReservationId");
+
+                    b.Property<int?>("FlightReservationId");
+
+                    b.Property<int?>("HotelReservationId");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("Sex");
+
+                    b.Property<int?>("TravelPackageReservationId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarReservationId");
+
+                    b.HasIndex("FlightReservationId");
+
+                    b.HasIndex("HotelReservationId");
+
+                    b.HasIndex("TravelPackageReservationId");
+
+                    b.ToTable("Customer");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FlightReservationId = 1,
+                            LastName = "Silva",
+                            Name = "José",
+                            Sex = 0
                         });
                 });
 
@@ -116,26 +190,65 @@ namespace eFlight.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AvailableVacancies");
+
+                    b.Property<string>("Company");
+
                     b.Property<string>("Destination");
 
                     b.Property<string>("Origin");
 
-                    b.Property<DateTime>("Out");
-
-                    b.Property<DateTime>("Return");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Flights");
+                    b.ToTable("Flight");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
+                            AvailableVacancies = 40,
+                            Company = "Gol",
                             Destination = "Paris",
-                            Origin = "São Paulo",
-                            Out = new DateTime(2019, 4, 10, 20, 7, 8, 13, DateTimeKind.Local).AddTicks(2025),
-                            Return = new DateTime(2019, 4, 20, 20, 7, 8, 20, DateTimeKind.Local).AddTicks(5543)
+                            Origin = "São Paulo"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AvailableVacancies = 40,
+                            Company = "TAM",
+                            Destination = "Nova Iorque",
+                            Origin = "Rio de Janeiro"
+                        });
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.Flights.FlightReservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("FlightId");
+
+                    b.Property<DateTime>("InputDate");
+
+                    b.Property<DateTime>("OutputDate");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FlightId");
+
+                    b.ToTable("FlightReservation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Reserva de Voo para Paris",
+                            FlightId = 1,
+                            InputDate = new DateTime(2019, 10, 19, 11, 33, 19, 4, DateTimeKind.Local).AddTicks(1321),
+                            OutputDate = new DateTime(2019, 10, 29, 11, 33, 19, 6, DateTimeKind.Local).AddTicks(6586)
                         });
                 });
 
@@ -144,6 +257,8 @@ namespace eFlight.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AvailableVacancies");
 
                     b.Property<string>("City")
                         .HasMaxLength(50);
@@ -158,110 +273,167 @@ namespace eFlight.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Hotels");
+                    b.ToTable("Hotel");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
+                            AvailableVacancies = 0,
                             City = "Paris",
                             Daily = 397.0,
                             Name = "Hotel Darcet",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 2,
+                            AvailableVacancies = 0,
                             City = "Paris",
                             Daily = 338.0,
                             Name = "Hôtel La Manufacture",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 3,
+                            AvailableVacancies = 0,
                             City = "Roma",
                             Daily = 859.0,
                             Name = "Hotel Italia",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 4,
+                            AvailableVacancies = 0,
                             City = "Roma",
                             Daily = 611.0,
                             Name = "Best Western Plus Hotel Universo",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 5,
+                            AvailableVacancies = 0,
                             City = "Roma",
                             Daily = 592.0,
                             Name = "Hotel Colosseum",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 6,
+                            AvailableVacancies = 0,
                             City = "Nova Yorque",
                             Daily = 1.0580000000000001,
                             Name = "SIXTY SoHo",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 7,
+                            AvailableVacancies = 0,
                             City = "Nova Yorque",
                             Daily = 522.0,
                             Name = "YOTEL New York",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 8,
+                            AvailableVacancies = 0,
                             City = "Rio de Janeiro",
                             Daily = 533.0,
                             Name = "Hotel Arpoador",
-                            Stars = 0
+                            Stars = 4
                         },
                         new
                         {
                             Id = 9,
+                            AvailableVacancies = 0,
                             City = "Rio de Janeiro",
                             Daily = 338.0,
                             Name = "Prodigy Hotel Santos Dumont Airport",
-                            Stars = 0
+                            Stars = 4
                         });
                 });
 
-            modelBuilder.Entity("eFlight.Domain.Features.Reservations.Reservation", b =>
+            modelBuilder.Entity("eFlight.Domain.Features.Hotels.HotelReservation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CarId");
-
-                    b.Property<int>("FlightId");
+                    b.Property<string>("Description");
 
                     b.Property<int>("HotelId");
 
-                    b.Property<string>("Name");
+                    b.Property<DateTime>("InputDate");
 
-                    b.Property<int>("UserId");
+                    b.Property<DateTime>("OutputDate");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarId");
-
-                    b.HasIndex("FlightId");
-
                     b.HasIndex("HotelId");
 
-                    b.HasIndex("UserId");
+                    b.ToTable("HotelReservation");
 
-                    b.ToTable("Reservations");
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Reserva de hotel em Paris",
+                            HotelId = 1,
+                            InputDate = new DateTime(2019, 10, 19, 11, 33, 19, 9, DateTimeKind.Local).AddTicks(6789),
+                            OutputDate = new DateTime(2019, 10, 29, 11, 33, 19, 9, DateTimeKind.Local).AddTicks(6807)
+                        });
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.TravelPackages.TravelPackage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TravelPackage");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Pacote Buenos Aires"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Pacote Paris"
+                        });
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.TravelPackages.TravelPackageReservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<DateTime>("InputDate");
+
+                    b.Property<DateTime>("OutputDate");
+
+                    b.Property<int>("TravelPackageId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TravelPackageId");
+
+                    b.ToTable("TravelPackageReservation");
                 });
 
             modelBuilder.Entity("eFlight.Domain.Features.Users.User", b =>
@@ -276,37 +448,57 @@ namespace eFlight.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Cpf = "03198210054",
-                            Name = "Dienisson"
-                        });
+                    b.ToTable("User");
                 });
 
-            modelBuilder.Entity("eFlight.Domain.Features.Reservations.Reservation", b =>
+            modelBuilder.Entity("eFlight.Domain.Features.Cars.CarReservation", b =>
                 {
                     b.HasOne("eFlight.Domain.Features.Cars.Car", "Car")
-                        .WithMany("Reservations")
+                        .WithMany("CarReservations")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
 
+            modelBuilder.Entity("eFlight.Domain.Features.Flights.Customer", b =>
+                {
+                    b.HasOne("eFlight.Domain.Features.Cars.CarReservation", "CarReservation")
+                        .WithMany("CarReservationCustomers")
+                        .HasForeignKey("CarReservationId");
+
+                    b.HasOne("eFlight.Domain.Features.Flights.FlightReservation", "FlightReservation")
+                        .WithMany("FlightReservationCustomers")
+                        .HasForeignKey("FlightReservationId");
+
+                    b.HasOne("eFlight.Domain.Features.Hotels.HotelReservation", "HotelReservation")
+                        .WithMany("HotelReservationCustomers")
+                        .HasForeignKey("HotelReservationId");
+
+                    b.HasOne("eFlight.Domain.Features.TravelPackages.TravelPackageReservation", "TravelPackageReservation")
+                        .WithMany("TravelPackageCustomers")
+                        .HasForeignKey("TravelPackageReservationId");
+                });
+
+            modelBuilder.Entity("eFlight.Domain.Features.Flights.FlightReservation", b =>
+                {
                     b.HasOne("eFlight.Domain.Features.Flights.Flight", "Flight")
-                        .WithMany("Reservations")
+                        .WithMany("FlightReservations")
                         .HasForeignKey("FlightId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
 
+            modelBuilder.Entity("eFlight.Domain.Features.Hotels.HotelReservation", b =>
+                {
                     b.HasOne("eFlight.Domain.Features.Hotels.Hotel", "Hotel")
-                        .WithMany("Reservations")
+                        .WithMany("HotelReservations")
                         .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
 
-                    b.HasOne("eFlight.Domain.Features.Users.User", "User")
-                        .WithMany("Reservations")
-                        .HasForeignKey("UserId")
+            modelBuilder.Entity("eFlight.Domain.Features.TravelPackages.TravelPackageReservation", b =>
+                {
+                    b.HasOne("eFlight.Domain.Features.TravelPackages.TravelPackage", "TravelPackage")
+                        .WithMany("TravelPackageReservations")
+                        .HasForeignKey("TravelPackageId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

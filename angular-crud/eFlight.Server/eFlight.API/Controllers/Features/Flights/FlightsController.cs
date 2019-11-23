@@ -1,37 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using eFlight.Application.Features.Flights;
-using eFlight.Data.Context;
-using eFlight.Data.Features;
-using eFlight.Domain;
+﻿using eFlight.Application.Features.Flights.Commands;
+using eFlight.Application.Features.Flights.Queries;
 using eFlight.Domain.Features.Flights;
-using Microsoft.AspNetCore.Http;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace eFlight.API.Controllers.Features.Flights
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class FlightsController : ControllerBase
     {
-        private IFlightAppService _carAppService;
-        private IRepositoryBase<Flight> _repositoryBase;
-        private readonly eFlightDbContext _context;
+        private readonly IMediator _mediator;
 
-        public FlightsController(eFlightDbContext context)
+        public FlightsController(IMediator mediator)
         {
-            _context = context;
-            _repositoryBase = new RepositoryBase<Flight>(_context);
-            _carAppService = new FlightAppService(_repositoryBase);
+            _mediator = mediator;
         }
 
-        // GET api/cars
+        // GET api/flights
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Flight>>> Get()
+        public Task<List<Flight>> Get()
         {
-            return await _carAppService.GetFlights();
-        }
+            var response =  _mediator.Send(new FlightLoadAllQuery());
+
+            return response;
+        }       
     }
 }

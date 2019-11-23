@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using eFlight.Application;
+﻿using eFlight.Application;
+using eFlight.Application.Features.Hotels.Commands;
+using eFlight.Application.Features.Hotels.Queries;
 using eFlight.Data.Context;
-using eFlight.Data.Features;
 using eFlight.Domain;
 using eFlight.Domain.Features.Hotels;
+using eFlight.Infra.Data.Features;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace eFlight.API.Controllers
 {
@@ -13,46 +16,19 @@ namespace eFlight.API.Controllers
     [ApiController]
     public class HotelsController : ControllerBase
     {
-        private IHotelAppService _hotelAppService;
-        private IRepositoryBase<Hotel> _repositoryBase;
-        private readonly eFlightDbContext _context;
-        public HotelsController(eFlightDbContext context)
+        private readonly IMediator _mediator;
+
+        public HotelsController(IMediator mediator)
         {
-            _context = context;
-            _repositoryBase = new RepositoryBase<Hotel>(_context);
-            _hotelAppService = new HotelAppService(_repositoryBase);
+            _mediator = mediator;
         }
 
-        // GET api/hotels
+        // GET api/flights
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Hotel>>> Get()
+        public Task<List<Hotel>> Get()
         {
-            return await _hotelAppService.GetHotels();
+            return _mediator.Send(new HotelLoadAllQuery());
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

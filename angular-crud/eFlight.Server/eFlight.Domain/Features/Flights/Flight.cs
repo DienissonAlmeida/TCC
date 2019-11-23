@@ -1,7 +1,6 @@
-﻿using eFlight.Domain.Features.Reservations;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace eFlight.Domain.Features.Flights
 {
@@ -11,10 +10,10 @@ namespace eFlight.Domain.Features.Flights
 
         public string Destination { get; set; }
 
-        public DateTime Out { get; set; }
+        public string Company { get; set; }
 
-        public DateTime Return { get; set; }
+        public int AvailableVacancies { get; set; }
+        public IList<FlightReservation> FlightReservations { get; set; }
 
-        public ICollection<Reservation> Reservations { get; set; }
     }
 }

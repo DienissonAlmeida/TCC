@@ -1,0 +1,60 @@
+<div class="card">
+
+  <div class="header">
+    <h2 class="title">Hotéis</h2>
+  </div>
+  <div class="content">
+
+    <form #f="ngForm">
+
+      <div class="form-group">
+        <label>Cidade:</label>
+        <input [(ngModel)]="filter.city" name="city" class="form-control">
+      </div>
+
+      <!-- <div class="form-group">
+        <label>To:</label>
+        <input [(ngModel)]="filter.to" name="to" class="form-control">
+      </div> -->
+
+      <div class="form-group">
+        <!-- <button (click)="search()" [disabled]="!f?.valid" class="btn btn-default">
+          Search
+        </button> -->
+        <!-- <a [routerLink]="['../hotel','new']" class="btn btn-default">Nova Reserva</a> -->
+
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<div class="card" *ngIf="hotelList">
+
+  <table class="table table-contensed" >
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Cidade</th>
+        <th>Nome</th>
+        <th>Estrelas</th>
+        <th>Diária</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let item of hotelList | filterList:filter.city" [class.active]="item === selectedHotel">
+        <td>{{item.id}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.stars}}</td>
+        <td>{{item.daily}}</td>
+        <td>
+          <!-- <a [routerLink]="['../flight', flight.id ]">Details</a> | -->
+          <a [routerLink]="['../hotelReservation', item.id ]" class="btn btn-default" style="float:right;">Ver Reservas </a>
+          <a>  </a>
+          <a [routerLink]="['../hotelReservationForm','new', item.id]" class="btn btn-default" style="float:right;">
+            Nova Reserva
+        </a>
+    </tr>
+  </table>
+</div>

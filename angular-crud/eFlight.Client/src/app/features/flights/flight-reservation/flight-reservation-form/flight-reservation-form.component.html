@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="header">
+        <h1 class="title">Reserva de Voo</h1>
+    </div>
+    <div class="content">
+
+        <p *ngIf="errors">{{ errors }}</p>
+
+        <form >
+
+            <!-- <div class="form-group">
+                <label>Id:</label>
+                <input [(ngModel)]="flight.id" name="id" class="form-control">
+            </div> -->
+            <div class="form-group">
+                <label>Descrição:</label>
+                 <input [(ngModel)]="flightReservation.description"
+                name="description" class="form-control" >
+            </div>
+
+            <div class="form-group">
+                <label>Data de Partida:</label>
+                <input [(ngModel)]="flightReservation.inputDate" type="text" name="inputDate" class="form-control" >
+              </div>
+
+            <div class="form-group">
+                <label>Data de Retorno:</label>
+                <input [(ngModel)]="flightReservation.outputDate" type="text" name="outputDate" class="form-control">
+              </div>
+
+            <div class="form-group">
+                <button
+                (click)="saveOrUpdate()"
+                class="btn btn-default">Salvar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

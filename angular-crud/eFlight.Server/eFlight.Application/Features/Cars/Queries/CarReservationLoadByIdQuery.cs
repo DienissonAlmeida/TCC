@@ -1,0 +1,13 @@
+﻿using eFlight.Domain.Features.Cars;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace eFlight.Application.Features.Cars.Queries
+{
+    public class CarReservationLoadByIdQuery : IRequest<CarReservation>
+    {
+        public int CarReservationId { get; set; }
+    }
+}

@@ -1,8 +1,6 @@
-﻿using eFlight.Application.Features.Cars;
-using eFlight.Data.Context;
-using eFlight.Data.Features;
-using eFlight.Domain;
+﻿using eFlight.Application.Features.Cars.Queries;
 using eFlight.Domain.Features.Cars;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,22 +11,18 @@ namespace eFlight.API.Controllers.Features.Cars
     [ApiController]
     public class CarsController : ControllerBase
     {
-        private ICarAppService _carAppService;
-        private IRepositoryBase<Car> _repositoryBase;
-        private readonly eFlightDbContext _context;
+        private readonly IMediator _mediator;
 
-        public CarsController(eFlightDbContext context)
+        public CarsController(IMediator mediator)
         {
-            _context = context;
-            _repositoryBase = new RepositoryBase<Car>(_context);
-            _carAppService = new CarAppService(_repositoryBase);
+            _mediator = mediator;
         }
 
-        // GET api/cars
+        // GET api/flights
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Car>>> Get()
+        public Task<List<Car>> Get()
         {
-            return await _carAppService.GetCars();
+            return _mediator.Send(new CarLoadAllQuery());
         }
     }
 }
